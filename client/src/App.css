@@ -1,0 +1,32 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 4vh;
+}
+
+.App-header {
+  background-color: #7448FF;
+  height: 5vh;
+  padding: 20px;
+  top: 0;
+  color: white;
+  text-align: left;
+  position: fixed;
+  width: 100%;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10vh;
+  font-size: large;
+}

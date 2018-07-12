@@ -1,0 +1,15 @@
+default: &default
+  adapter:  postgresql
+  encoding: utf8
+  username: novaquotes
+  password: novaquotes
+  host: localhost
+  pool: 5
+
+development:
+  <<: *default
+  database: novaquotes_development
+
+test:
+  <<: *default
+  database: novaquotes_test

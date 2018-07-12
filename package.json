@@ -1,0 +1,17 @@
+{
+  "name": "novaquotes",
+  "version": "1.0.0",
+  "description": "Sistema para armazenamento de visualização de quotes geradas no canal slack.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "cd client && npm install && npm run build && cd ..",
+    "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'"
+  },
+  "author": "Vinicius Franco",
+  "license": "ISC"
+}
