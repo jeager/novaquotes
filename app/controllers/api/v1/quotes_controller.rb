@@ -23,7 +23,7 @@ class Api::V1::QuotesController < ApplicationController
     @quote.team_domain = params[:team_domain]
     @quote.parse_quote('@'+params[:user_name])
     if @quote.save
-      render json: "Quote criada com sucesso, visualize ela em: ", status: :created
+      render json: "Quote criada com sucesso, visualize ela em: https://thenovaquotes.herokuapp.com/", status: :created
     else
       render json: @quote.errors, status: :unprocessable_entity
     end
