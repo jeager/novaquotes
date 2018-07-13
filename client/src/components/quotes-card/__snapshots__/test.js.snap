@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should render correctly 1`] = `
+<div
+  className="animated flipInY card odd"
+>
+  <div
+    className="card-author"
+  >
+    <h4
+      className="card-author-name"
+    >
+      Larsen Reilly
+    </h4>
+  </div>
+  <div
+    className="card-description"
+  >
+    <p />
+  </div>
+  <div
+    className="card-photo-container"
+  >
+    <img
+      className="card-photo"
+      src="http://placehold.it/32x32"
+    />
+  </div>
+</div>
+`;

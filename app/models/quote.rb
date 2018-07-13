@@ -17,18 +17,18 @@ class Quote < ApplicationRecord
     else
       user = User.find_by_slack_login(user_name)
     end
-    if user.nil?
-      client = Slack::Web::Client.new
-      begin
-        slack_user_name = text_array.empty? ? user_name : text_array[1]
-        slack_user = client.users_info(user: slack_user_name)
+    client = Slack::Web::Client.new
+    begin
+      slack_user_name = text_array.empty? ? user_name : text_array[1]
+      slack_user = client.users_info(user: slack_user_name)
+      if user.nil?
         user = User.create(name: slack_user.user.real_name, photo: slack_user.user.profile.image_192, slack_login: slack_user_name)
-        self.user_id = user.id
-      rescue Slack::Web::Api::Errors::SlackError
-        self.errors.add(:user_id, 'Usuário fornecido não encontrado')
+      else
+        user.update_attributes(name: slack_user.user.real_name, photo: slack_user.user.profile.image_192, slack_login: slack_user_name)
       end
-    else
       self.user_id = user.id
+    rescue Slack::Web::Api::Errors::SlackError
+      self.errors.add(:user_id, 'Usuário fornecido não encontrado')
     end
   end
 end

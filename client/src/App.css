@@ -10,6 +10,7 @@ body {
 }
 
 .App-header {
+  z-index: 9999;
   background-color: #7448FF;
   height: 5vh;
   padding: 20px;
@@ -27,6 +28,11 @@ body {
 .App-intro {
   margin-left: 10%;
   margin-right: 10%;
-  padding-top: 10vh;
+  padding-top: 100px;
   font-size: large;
+  padding-bottom: 100px;
+}
+
+body {
+  background: #35383C;
 }

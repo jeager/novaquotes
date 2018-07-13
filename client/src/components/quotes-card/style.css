@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+.card-author-name {
+  word-wrap: break-word;
+  color: white;
+}
+
+.card {
+  border-radius: 10px;
+  height: 40vh;
+  margin: 20px 20px 45px 20px;
+  width: 250px;
+}
+
+.card-photo {
+  border-radius: 80px;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  border: 3px #7448FF solid;
+}
+
+.even {
+  background: linear-gradient(30deg, #1F6BFF, #35383C, #7448FF);
+  
+}
+
+.odd {
+  background: linear-gradient(30deg, #7448FF, #35383C, #1F6BFF);
+}
+
+.card-photo-container {
+  height: 32%;
+  vertical-align: text-bottom;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.card-description:before, :after {
+  opacity: 0.5;
+  color: #ABAEB6;
+  font-family: 'Special Elite', cursive;
+  font-size: 5rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.card-description:before {
+  margin-bottom: 70px;
+  content:'\201C';
+}
+
+.card-description:after {
+  margin-top: 90px;
+  content:'\201D';
+}
+
+.card-description {
+  background: #E8E8E9;
+  vertical-align: middle;
+  height: 70%;
+  max-height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+@media(max-width: 600px) {
+  .card-photo-container {
+    height: 32%;
+  }
+  
+  .card-description {
+    height: 60%;
+    max-height: 60%;
+  }
+
+  .card {
+    height: 70vh;
+  }
+}
