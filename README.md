@@ -1,8 +1,6 @@
-# README
+# TheNovaquotes
 
-## TheNovaquotes
-
-This app was designed to be a "quotes" database for the Novatics team. It integrates with Slack, where the quotes can be submited.
+This app was designed to be a "quotes" database for the Novatics team. It integrates with Slack, where the quotes can be submited. THe demo can be viewed in https://thenovaquotes.herokuapp.com
 
 ## The Stack
 
@@ -33,25 +31,21 @@ The server is the rails application itself, the Client is inside the client fold
 
 Run `bundle install` on the root of the project
 
-Make sure to configure your database to use Postgres
+Make sure to configure your database to use Postgres and set your user and password.
+
 Run `rake db:setup` then `rake db:migrate`
 
-
-`rails s -p 3001` to start the server (use port 3001, so the client will run on port 3000)
+Finally run `rails s -p 3001` to start the server (use port 3001, so the client will run on port 3000)
 
 #### Client
 
 Inside the client folder do:
 
-`yarn install`
-
-or
-
-`npm install`
+`yarn install` or `npm install`
 
 and then
 
-`yarn start`
+`yarn start` or `npm start`
 
 #### Run both systems with foreman
 
@@ -65,3 +59,18 @@ ou simply use the rake task for that
 
 It will run both commands and use a single terminal window to do that.
 
+## Future Work
+
+Help us improve this amazing system! Some features that could be implemented in future work:
+
+##### Vote system
+A system to vote for the best quotes
+
+##### Filter system
+Filter the quotes by author and by channel
+
+##### Interaction with bot
+Increase the interaction with the novabot
+
+##### Improve tests
+Tests are never enough.

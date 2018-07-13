@@ -5,7 +5,7 @@ class Api::V1::QuotesController < ApplicationController
   def index
     @quotes = Quote.all
 
-    render json: @quotes.to_json(:include => :user)
+    render json: @quotes.order('created_at DESC').to_json(:include => :user)
   end
 
   # GET /quotes/1
